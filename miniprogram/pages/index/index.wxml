@@ -1,0 +1,8 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="page_container">
+  <swiper class="swiper_container" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay circular >
+    <swiper-item wx:for="{{banners}}" wx:key="linkId" bindtap="tapBanner"  data-companyxcxid="{{item.companyxcxid}}"  data-linktype="{{item.linkType}}" data-id="{{item.linkId}}" data-type="{{item.type}}">
+      <image mode="aspectFill" src="{{item.cover}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
